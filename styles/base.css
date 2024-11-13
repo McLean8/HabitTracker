@@ -1,0 +1,43 @@
+:root {
+  --primary-color: rgb(0, 0, 0);
+  --background-color: whitesmoke;
+  --border-color: rgba(0, 0, 0, 0.8);
+  --font-size-large: 25px;
+  --checkbox-color: black;
+  --text-color: black;
+}
+
+[data-theme='dark'] {
+  --primary-color: rgb(255, 255, 255);
+  --background-color: #1a1a1a;
+  --border-color: rgba(255, 255, 255, 0.8);
+  --checkbox-color: white;
+  --text-color: white;
+  --textarea-bg: #2d2d2d;
+}
+
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  text-align: center;
+}
+
+body {
+  padding: min(50px, 7%);
+  background-color: var(--background-color);
+}
+
+/* Add these responsive adjustments */
+@media screen and (max-width: 768px) {
+  :root {
+    --font-size-large: 16px;
+  }
+
+  body {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Weekly habit tracker to monitor your daily habits and priorities" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/main.css" media="print" onload="this.media='all'" />
+    <script src="scripts/main.js" type="module" defer></script>
+    <title>Habit Tracker</title>
+  </head>
+  <body>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    <form id="myForm">
+      <header>
+        <h1>Weekly Habit Tracker</h1>
+        <div class="week-progress">
+          <div class="progress-header">
+            <h3>Weekly Progress</h3>
+            <div id="resetTimer" class="reset-timer">Next reset in: --:--:--</div>
+          </div>
+          <div class="progress-bar">
+            <div id="weekProgress" class="progress-bar-fill"></div>
+          </div>
+          <div class="progress-labels">
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+            <span>Sun</span>
+          </div>
+        </div>
+      </header>
+      <div class="grid-container">
+        <div class="firstRow header-cell" style="border-right: 1px solid white"><strong>WEEKLY PRIORITIES</strong></div>
+        <div class="firstRow header-cell"><strong>HABIT TRACKER</strong></div>
+        <div class="firstRow header-cell day-header"><strong>M</strong></div>
+        <div class="firstRow header-cell day-header"><strong>T</strong></div>
+        <div class="firstRow header-cell day-header"><strong>W</strong></div>
+        <div class="firstRow header-cell day-header"><strong>T</strong></div>
+        <div class="firstRow header-cell day-header"><strong>F</strong></div>
+        <div class="firstRow header-cell day-header"><strong>S</strong></div>
+        <div class="firstRow header-cell day-header" style="border-right: 1px solid white"><strong>S</strong></div>
+        <div class="firstRow header-cell"><strong>WEEKEND PLANS</strong></div>
+
+        <input id="weeklyPriorityRow1" type="text" class="weeklyPriority" aria-label="Weekly Priority 1" />
+        <input id="habitTrackRow1" type="text" class="habitTrack" aria-label="Habit 1" />
+        <input id="checkRow1.1" type="checkbox" aria-label="Monday check for habit 1" />
+        <input id="checkRow1.2" type="checkbox" aria-label="Tuesday check for habit 1" />
+        <input id="checkRow1.3" type="checkbox" aria-label="Wednesday check for habit 1" />
+        <input id="checkRow1.4" type="checkbox" aria-label="Thursday check for habit 1" />
+        <input id="checkRow1.5" type="checkbox" aria-label="Friday check for habit 1" />
+        <input id="checkRow1.6" type="checkbox" aria-label="Saturday check for habit 1" />
+        <input id="checkRow1.7" type="checkbox" aria-label="Sunday check for habit 1" />
+        <input id="weekendPlansRow1" type="text" class="weekendPlans" aria-label="Weekend Plans 1" />
+
+        <input id="weeklyPrioRow2" type="text" class="weeklyPriority" aria-label="Weekly Priority 2" />
+        <input id="habitTrackRow2" type="text" class="habitTrack" aria-label="Habit 2" />
+        <input id="checkRow2.1" type="checkbox" aria-label="Monday check for habit 2" />
+        <input id="checkRow2.2" type="checkbox" aria-label="Tuesday check for habit 2" />
+        <input id="checkRow2.3" type="checkbox" aria-label="Wednesday check for habit 2" />
+        <input id="checkRow2.4" type="checkbox" aria-label="Thursday check for habit 2" />
+        <input id="checkRow2.5" type="checkbox" aria-label="Friday check for habit 2" />
+        <input id="checkRow2.6" type="checkbox" aria-label="Saturday check for habit 2" />
+        <input id="checkRow2.7" type="checkbox" aria-label="Sunday check for habit 2" />
+        <input id="weekendPlansRow2" type="text" class="weekendPlans" aria-label="Weekend Plans 2" />
+
+        <input id="weeklyPrioRow3" type="text" class="weeklyPriority" aria-label="Weekly Priority 3" />
+        <input id="habitTrackRow3" type="text" class="habitTrack" aria-label="Habit 3" />
+        <input id="checkRow3.1" type="checkbox" aria-label="Monday check for habit 3" />
+        <input id="checkRow3.2" type="checkbox" aria-label="Tuesday check for habit 3" />
+        <input id="checkRow3.3" type="checkbox" aria-label="Wednesday check for habit 3" />
+        <input id="checkRow3.4" type="checkbox" aria-label="Thursday check for habit 3" />
+        <input id="checkRow3.5" type="checkbox" aria-label="Friday check for habit 3" />
+        <input id="checkRow3.6" type="checkbox" aria-label="Saturday check for habit 3" />
+        <input id="checkRow3.7" type="checkbox" aria-label="Sunday check for habit 3" />
+        <input id="weekendPlansRow3" type="text" class="weekendPlans" aria-label="Weekend Plans 3" />
+
+        <input id="weeklyPrioRow4" type="text" class="weeklyPriority" aria-label="Weekly Priority 4" />
+        <input id="habitTrackRow4" type="text" class="habitTrack" aria-label="Habit 4" />
+        <input id="checkRow4.1" type="checkbox" aria-label="Monday check for habit 4" />
+        <input id="checkRow4.2" type="checkbox" aria-label="Tuesday check for habit 4" />
+        <input id="checkRow4.3" type="checkbox" aria-label="Wednesday check for habit 4" />
+        <input id="checkRow4.4" type="checkbox" aria-label="Thursday check for habit 4" />
+        <input id="checkRow4.5" type="checkbox" aria-label="Friday check for habit 4" />
+        <input id="checkRow4.6" type="checkbox" aria-label="Saturday check for habit 4" />
+        <input id="checkRow4.7" type="checkbox" aria-label="Sunday check for habit 4" />
+        <input id="weekendPlansRow4" type="text" class="weekendPlans" aria-label="Weekend Plans 4" />
+
+        <input id="weeklyPrioRow5" type="text" class="weeklyPriority" aria-label="Weekly Priority 5" />
+        <input id="habitTrackRow5" type="text" class="habitTrack" aria-label="Habit 5" />
+        <input id="checkRow5.1" type="checkbox" aria-label="Monday check for habit 5" />
+        <input id="checkRow5.2" type="checkbox" aria-label="Tuesday check for habit 5" />
+        <input id="checkRow5.3" type="checkbox" aria-label="Wednesday check for habit 5" />
+        <input id="checkRow5.4" type="checkbox" aria-label="Thursday check for habit 5" />
+        <input id="checkRow5.5" type="checkbox" aria-label="Friday check for habit 5" />
+        <input id="checkRow5.6" type="checkbox" aria-label="Saturday check for habit 5" />
+        <input id="checkRow5.7" type="checkbox" aria-label="Sunday check for habit 5" />
+        <input id="weekendPlansRow5" type="text" class="weekendPlans" aria-label="Weekend Plans 5" />
+
+        <input id="weeklyPrioRow6" type="text" class="weeklyPriority" style="border-bottom: hidden" aria-label="Weekly Priority 6" />
+        <input id="habitTrackRow6" type="text" class="habitTrack" style="border-bottom: hidden" aria-label="Habit 6" />
+        <input id="checkRow6.1" type="checkbox" aria-label="Monday check for habit 6" />
+        <input id="checkRow6.2" type="checkbox" aria-label="Tuesday check for habit 6" />
+        <input id="checkRow6.3" type="checkbox" aria-label="Wednesday check for habit 6" />
+        <input id="checkRow6.4" type="checkbox" aria-label="Thursday check for habit 6" />
+        <input id="checkRow6.5" type="checkbox" aria-label="Friday check for habit 6" />
+        <input id="checkRow6.6" type="checkbox" aria-label="Saturday check for habit 6" />
+        <input id="checkRow6.7" type="checkbox" aria-label="Sunday check for habit 6" />
+        <input id="weekendPlansRow6" type="text" class="weekendPlans" style="border-bottom: hidden" aria-label="Weekend Plans 6" />
+      </div>
+      <div class="grid-container2">
+        <div class="firstRow" style="border-right: 1px solid white"><strong>MON</strong></div>
+        <div class="firstRow" style="border-right: 1px solid white"><strong>TUE</strong></div>
+        <div class="firstRow" style="border-right: 1px solid white"><strong>WED</strong></div>
+        <div class="firstRow" style="border-right: 1px solid white"><strong>THU</strong></div>
+        <div class="firstRow" style="border-right: 1px solid #000"><strong>FRI</strong></div>
+        <textarea id="commentMon" class="comments" name="comments" rows="10" cols="60" data-day="Mon" placeholder="Enter your Monday notes here..."></textarea>
+        <textarea id="commentTue" class="comments" name="comments" rows="10" cols="60" data-day="Tue" placeholder="Enter your Tuesday notes here..."></textarea>
+        <textarea id="commentWed" class="comments" name="comments" rows="10" cols="60" data-day="Wed" placeholder="Enter your Wednesday notes here..."></textarea>
+        <textarea id="commentThu" class="comments" name="comments" rows="10" cols="60" data-day="Thu" placeholder="Enter your Thursday notes here..."></textarea>
+        <textarea id="commentFri" class="comments" name="comments" rows="10" cols="60" data-day="Fri" placeholder="Enter your Friday notes here..."></textarea>
+      </div>
+    </form>
+  </body>
+</html>

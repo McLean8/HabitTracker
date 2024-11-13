@@ -1,0 +1,62 @@
+input:focus {
+  outline: none;
+}
+
+.weeklyPriority,
+.habitTrack,
+.weekendPlans {
+  font-size: var(--font-size-large);
+  background-color: var(--background-color);
+  border: none;
+  border-bottom: 2px dotted var(--primary-color);
+  color: var(--text-color);
+}
+
+.weeklyPriority {
+  border-right: 1px solid var(--primary-color);
+}
+
+.weekendPlans {
+  border-left: 1px solid var(--primary-color);
+}
+
+.comments {
+  resize: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: var(--textarea-bg, var(--background-color));
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 8px;
+}
+
+.comments::placeholder {
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+input[type='checkbox'] {
+  background-color: var(--background-color);
+  border: 1px dotted var(--background-color);
+  accent-color: var(--checkbox-color);
+}
+
+.form-controls {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid var(--border-color);
+}
+
+.form-controls button {
+  margin: 0 5px;
+  padding: 8px 16px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-controls button:hover {
+  opacity: 0.9;
+}
